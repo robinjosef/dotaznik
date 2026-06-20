@@ -354,8 +354,8 @@
           collected, so your responses are completely anonymous.
         </p>
         <p>
-          PS: SurveyCircle users receive points for their participation, which
-          can be used to recruit free survey participants at SurveyCircle.com
+          PS: SurveyCircle or SurveySwap users receive points for their participation, which
+          can be used to recruit free survey participants.
         </p>
         <button class="btn-primary" id="btn-agree">
           I agree to participate
@@ -451,6 +451,13 @@
           </p>
           <div class="code" id="survey-code">XXXXXX</div>
         </div>
+        <div class="code-box">
+          <p class="muted small">
+            Completing this survey via SurveySwap? Use this code to confirm
+            your participation:
+          </p>
+          <div class="code" id="survey-code2">XXXXXX</div>
+        </div>
 
         <div class="email-box">
           <p class="muted small">
@@ -480,11 +487,14 @@
         GOOGLE_SCRIPT_URL:
           "https://script.google.com/macros/s/AKfycbzb45UUrs88cVMW8-t3b-lrpOroOVDC34PhKCuWtz1ToxkvHLNa9OMKCaXC7XP6lKvqSA/exec",
         SURVEYCIRCLE_CODE: "Y7GP-LCJY-H4Q7-H7PK",
+        SURVEYSWAP_CODE: "ABEF-MN7V-J8K3",
       };
       // -------------------------------------------------------------------------
 
       document.getElementById("survey-code").textContent =
         CONFIG.SURVEYCIRCLE_CODE;
+      document.getElementById("survey-code2").textContent =
+        CONFIG.SURVEYSWAP_CODE;
 
       const screens = Array.from(document.querySelectorAll(".screen"));
       const progressFill = document.getElementById("progress-fill");
